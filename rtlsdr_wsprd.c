@@ -44,7 +44,7 @@
 #include <rtl-sdr.h>
 
 #include "rtlsdr_wsprd.h"
-#include "wsprd/wsprd.h"
+#include "lib/wsprd/wsprd.h"
 
 /* TODO
  - multispot report in one post

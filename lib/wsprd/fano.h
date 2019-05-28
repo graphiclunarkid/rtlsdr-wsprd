@@ -1,6 +1,6 @@
 /*
  This file is part of wsprd.
-
+ 
  File name: fano.h
 
  Description: Header file for sequential Fano decoder.
@@ -9,11 +9,12 @@
  Minor modifications by Joe Taylor, K1JT
 */
 
-#pragma once
+#ifndef FANO_H
+#define FANO_H
 
 int fano(unsigned int *metric, unsigned int *cycles, unsigned int *maxnp,
-         unsigned char *data,unsigned char *symbols, unsigned int nbits,
-         int mettab[2][256],int delta,unsigned int maxcycles);
+	unsigned char *data,unsigned char *symbols, unsigned int nbits,
+	 int mettab[2][256],int delta,unsigned int maxcycles);
 
 int encode(unsigned char *symbols,unsigned char *data,unsigned int nbytes);
 
@@ -34,3 +35,5 @@ _tmp = (encstate) & POLY2;\
 _tmp ^= _tmp >> 16;\
 (sym) |= Partab[(_tmp ^ (_tmp >> 8)) & 0xff];\
 }
+
+#endif
